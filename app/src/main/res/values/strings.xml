@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Notes</string>
+    <string name="save">Сохранить</string>
+    <string name="makeNote">Введите заметку</string>
+    <string name="makeNameNote">Введите название</string>
+    <string name="saved">Успешно сохранено</string>
+    <string name="emptyValue">Пустая заметка</string>
+</resources>
