@@ -1,5 +1,7 @@
 package ru.dariamikhailukova.notes.contract
 
+import android.content.Intent
+
 interface ContractInterface {
     interface View {
         fun initView()
@@ -7,11 +9,13 @@ interface ContractInterface {
         fun getNoteName(): String
         fun getNoteText(): String
         fun showToast(resId: Int)
+        fun sendIntent(intent: Intent)
     }
 
     interface Presenter {
         fun readNote()
-        //fun getText(): String
+        fun sendEmail()
+        //TODO: добавить метод считывания данных из модели
     }
 
     interface Model {

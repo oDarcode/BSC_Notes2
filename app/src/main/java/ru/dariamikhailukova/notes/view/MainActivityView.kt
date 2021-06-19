@@ -1,11 +1,12 @@
 package ru.dariamikhailukova.notes.view
 
-import androidx.appcompat.app.AppCompatActivity
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
-import ru.dariamikhailukova.notes.presenter.MainActivityPresenter
+import androidx.appcompat.app.AppCompatActivity
 import ru.dariamikhailukova.notes.contract.ContractInterface.*
 import ru.dariamikhailukova.notes.databinding.ActivityMainBinding
+import ru.dariamikhailukova.notes.presenter.MainActivityPresenter
 
 class MainActivityView: AppCompatActivity(), View {
     private lateinit var binding: ActivityMainBinding
@@ -19,10 +20,25 @@ class MainActivityView: AppCompatActivity(), View {
     }
 
     override fun initView(){
-        binding.button.setOnClickListener {
+        binding.buttonSave.setOnClickListener {
             presenter?.readNote()
         }
+
+        binding.buttonAbout.setOnClickListener {
+            val intent = Intent(this, AboutActivityView::class.java)
+            startActivity(intent)
+        }
+
+        binding.buttonShare.setOnClickListener {
+            presenter?.sendEmail()
+        }
+
     }
+
+    override fun sendIntent(intent: Intent) {
+        startActivity(Intent.createChooser(intent, "Choose from..."))
+    }
+
     override fun updateViewData(){
         binding.nameNote.setText("")
         binding.textNote.setText("")
@@ -37,7 +53,7 @@ class MainActivityView: AppCompatActivity(), View {
     }
 
     override fun showToast(resId: Int) {
-        Toast.makeText(this, resId, Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, resId, Toast.LENGTH_SHORT).show()
     }
 
 }

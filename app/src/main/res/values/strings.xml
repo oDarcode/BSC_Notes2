@@ -5,4 +5,12 @@
     <string name="makeNameNote">Введите название</string>
     <string name="saved">Успешно сохранено</string>
     <string name="emptyValue">Пустая заметка</string>
+    <string name="emptyError">Нет сохраненной заметки</string>
+    <string name="about">О программе</string>
+    <string name="textAbout">Привет!\n
+        Это приложение создано \nМихайлюковой Дарьей.\n
+        Это мое первое android приложение.\nСпасибо за просмотр!</string>
+    <string name="share">Поделиться</string>
+    <string name="notes">Notes</string>
+
 </resources>
