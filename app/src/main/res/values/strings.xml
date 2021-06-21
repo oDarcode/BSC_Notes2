@@ -7,9 +7,7 @@
     <string name="emptyValue">Пустая заметка</string>
     <string name="emptyError">Нет сохраненной заметки</string>
     <string name="about">О программе</string>
-    <string name="textAbout">Привет!\n
-        Это приложение создано \nМихайлюковой Дарьей.\n
-        Это мое первое android приложение.\nСпасибо за просмотр!</string>
+    <string name="textAbout">Привет!\nЭто приложение создано\nМихайлюковой Дарьей.\nСпасибо за просмотр!</string>
     <string name="share">Поделиться</string>
     <string name="notes">Notes</string>
 
